@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(230, 17%, 14%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+body :after {
+  content: "";
+  background: hsl(232, 19%, 15%);
+  position: fixed;
+  top: 0;
+  bottom: 70%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0 0 10px 10px;
+}
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 87.5%;
+  color: white;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.top_title {
+  position: relative;
+}
+.top_title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.top_title h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  margin: 0.3rem 0 2rem 0;
+}
+
+.toggle_btn_container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.toggle_btn_container p {
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+  width: 60px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+
+button {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 34px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+button .dark_toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.2rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: hsl(230, 17%, 14%);
+}
+
+button .light_toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.2rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  visibility: hidden;
+}
+
+.toggle_theme {
+  background: hsl(0, 0%, 100%);
+}
+.toggle_theme :after {
+  content: "";
+  background: hsl(225, 100%, 98%);
+}
+.toggle_theme h1,
+.toggle_theme h4,
+.toggle_theme footer {
+  color: hsl(230, 17%, 14%);
+}
+.toggle_theme h3,
+.toggle_theme h5 {
+  color: hsl(228, 12%, 44%);
+}
+.toggle_theme .hero_card {
+  cursor: grab;
+  background: hsl(227, 47%, 96%);
+}
+.toggle_theme .hero_card:hover {
+  background: #e1e3f0;
+}
+.toggle_theme button {
+  background: #aeb3cb;
+}
+.toggle_theme button:hover {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+.toggle_theme button .light_toggle {
+  visibility: visible;
+}
+.toggle_theme button .dark_toggle {
+  visibility: hidden;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hero_card {
+  background: hsl(228, 28%, 20%);
+  padding: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: 2s ease alternate;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hero_card:hover {
+  background: #333a56;
+}
+
+.facebook_top_border {
+  border-top: solid 3pt hsl(208, 92%, 53%);
+}
+
+.twitter_top_border {
+  border-top: solid 3pt hsl(208, 92%, 53%);
+}
+
+.instagram_top_border {
+  border-top: solid 3pt;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))
+    1;
+}
+
+.youtube_top_border {
+  border-top: solid 3pt hsl(348, 97%, 39%);
+}
+
+.top_social_icon_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top_social_icon_name img {
+  width: 15px;
+}
+.top_social_icon_name h3 {
+  margin-left: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+
+.top_social_followers {
+  margin: 1.3rem 0;
+}
+.top_social_followers h4 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.top_social_followers h5 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(228, 12%, 44%);
+  margin-top: 0.5rem;
+}
+
+.top_social_count p {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: hsl(163, 72%, 41%);
+}
+.top_social_count span {
+  display: inline-block;
+  font-size: 0.7rem;
+  position: relative;
+  left: 0;
+  top: -1px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.3rem 0;
+}
+
+.bottom_hero_card {
+  padding: 1.3rem;
+}
+
+.bottom_social_icon_name {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0rem;
+  width: 100%;
+}
+.bottom_social_icon_name h3 {
+  margin: 0;
+}
+
+.bottom_social_count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.bottom_social_count h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.bottom_social_count .red,
+.top_social_count .red {
+  color: hsl(348, 97%, 39%);
+}
+
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 2rem;
+}
+footer a {
+  color: #4763ff;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin: 2rem;
+    width: 100%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  .top_title {
+    position: relative;
+  }
+  .top_title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .top_title h2 {
+    margin: 0.3rem 0 2rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1pt #353535;
+  }
+
+  .hero_card {
+    margin-bottom: 1.5rem;
+  }
+
+  .toggle_btn_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 3rem;
+  }
+  .toggle_btn_container p {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .wrapper {
+    margin: 2rem;
+    width: 90%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .top_title h2 {
+    margin: 0.3rem 0 2rem 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .toggle_btn_container p {
+    margin-right: 1rem;
+  }
+}
